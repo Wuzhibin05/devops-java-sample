@@ -1,9 +1,9 @@
 pipeline {
-  agent {
-    node {
-      label 'maven'
+    agent {
+        node {
+            label 'maven'
+        }
     }
-  }
 
     parameters {
         string(name:'TAG_NAME',defaultValue: '',description:'')
@@ -13,8 +13,8 @@ pipeline {
         DOCKER_CREDENTIAL_ID = 'dockerhub-id'
         GITHUB_CREDENTIAL_ID = 'github-id'
         KUBECONFIG_CREDENTIAL_ID = 'kubeconfig-id'
-        REGISTRY = 'docker.io'
-        DOCKERHUB_NAMESPACE = 'docker_username'
+        REGISTRY = 'szkingdom.com'
+        DOCKERHUB_NAMESPACE = 'kubesphere'
         GITHUB_ACCOUNT = 'kubesphere'
         APP_NAME = 'devops-java-sample'
         SONAR_CREDENTIAL_ID = 'sonar-token'
